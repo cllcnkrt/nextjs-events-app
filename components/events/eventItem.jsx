@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from 'next/link';
 import styles from './eventItem.module.css';
+import Button from '../ui/button';
 
 function EventItem({ title, image, date, location, id }) {
   const dateFormatted = new Date(date).toLocaleDateString('en-US', {
@@ -26,7 +26,7 @@ function EventItem({ title, image, date, location, id }) {
           </div>
         </div>
         <div className={styles.actions}>
-          <Link href={exploreLink}>Explore events</Link>
+          <Button link={exploreLink}>Explore Event</Button>
         </div>
       </div>
     </li>
