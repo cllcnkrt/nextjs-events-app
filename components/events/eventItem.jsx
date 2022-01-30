@@ -1,7 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import styles from './eventItem.module.scss';
+import styles from './eventItem.module.css';
 
 function EventItem({ title, image, date, location, id }) {
   const dateFormatted = new Date(date).toLocaleDateString('en-US', {
@@ -15,24 +14,18 @@ function EventItem({ title, image, date, location, id }) {
 
   return (
     <li className={styles.item}>
-      <img
-        className={styles.image}
-        src={`/${image}`}
-        alt={title}
-        height={150}
-        width={200}
-      />
-      <div>
-        <div>
-          <h2 className={styles.h2}>{title}</h2>
-          <div>
+      <img src={`/${image}`} alt={title} />
+      <div className={styles.content}>
+        <div className={styles.summary}>
+          <h2>{title}</h2>
+          <div className={styles.date}>
             <time>{dateFormatted}</time>
           </div>
           <div>
-            <address>{formattedLocation}</address>
+            <address className={styles.address}>{formattedLocation}</address>
           </div>
         </div>
-        <div>
+        <div className={styles.actions}>
           <Link href={exploreLink}>Explore events</Link>
         </div>
       </div>
