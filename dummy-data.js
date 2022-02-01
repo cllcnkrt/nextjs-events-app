@@ -29,6 +29,36 @@ const DUMMY_EVENTS = [
     image: 'images/extrovert-event.jpg',
     isFeatured: true,
   },
+  {
+    id: 'e4',
+    title: 'Bitcoin for beginners',
+    description:
+      'Everyone can learn to code! Yes, everyone! In this live event, we are going to go through all the key basics and get you started with programming as well.',
+    location: 'Somestreet 25, 12345 San Somewhereo',
+    date: '2021-06-12',
+    image: 'images/bitcoin.jpg',
+    isFeatured: false,
+  },
+  {
+    id: 'e5',
+    title: 'Coffee for everyone',
+    description:
+      "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
+    location: 'New Wall Street 5, 98765 New Work',
+    date: '2021-07-30',
+    image: 'images/coffee.jpg',
+    isFeatured: true,
+  },
+  {
+    id: 'e6',
+    title: 'Dating for extroverts',
+    description:
+      'You probably need no help with networking in general. But focusing your energy correctly - that is something where most people can improve.',
+    location: 'My Street 12, 10115 Broke City',
+    date: '2022-09-10',
+    image: 'images/dating.jpg',
+    isFeatured: true,
+  },
 ];
 
 export function getFeaturedEvents() {
