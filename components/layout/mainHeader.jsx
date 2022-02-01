@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
+import styles from './mainHeader.module.css';
 
 function MainHeader() {
   return (
-    <header>
-      <div>
+    <header className={styles.header}>
+      <div className={styles.logo}>
         <Link href="/">Events</Link>
       </div>
-      <nav>
+      <nav className={styles.navigation}>
         <ul>
           <li>
             <Link href="/events">Browse All Events</Link>
