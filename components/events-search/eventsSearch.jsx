@@ -1,21 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Button from '../ui/button';
 import styles from './eventsSearch.module.css';
 
-function EventsSearch() {
+function EventsSearch({ onSearch }) {
+  const yearInputRef = useRef();
+  const monthInputRef = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const selectedYear = yearInputRef.current.value;
+    const selectedMonth = monthInputRef.current.value;
+    onSearch(selectedYear, selectedMonth);
+  };
+
   return (
-    <form className={styles.form}>
+    <form className={styles.form} onSubmit={handleSubmit}>
       <div className={styles.controls}>
         <div className={styles.control}>
           <label htmlFor="year">Year</label>
-          <select id="year">
+          <select id="year" ref={yearInputRef}>
             <option value="2021">2021</option>
             <option value="2022">2022</option>
           </select>
         </div>
         <div className={styles.control}>
           <label htmlFor="month">month</label>
-          <select id="month">
+          <select id="month" ref={monthInputRef}>
             <option value="1">Janaury</option>
             <option value="2">February</option>
             <option value="3">March</option>
@@ -31,7 +42,7 @@ function EventsSearch() {
           </select>
         </div>
       </div>
-      <Button>Find Events</Button>
+      <Button onClick={handleSubmit}>Find Events</Button>
     </form>
   );
 }
