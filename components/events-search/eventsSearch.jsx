@@ -4,16 +4,16 @@ import styles from './eventsSearch.module.css';
 
 function EventsSearch() {
   return (
-    <form>
-      <div>
-        <div>
+    <form className={styles.form}>
+      <div className={styles.controls}>
+        <div className={styles.control}>
           <label htmlFor="year">Year</label>
           <select id="year">
             <option value="2021">2021</option>
             <option value="2022">2022</option>
           </select>
         </div>
-        <div>
+        <div className={styles.control}>
           <label htmlFor="month">month</label>
           <select id="month">
             <option value="1">Janaury</option>

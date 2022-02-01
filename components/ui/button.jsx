@@ -6,7 +6,7 @@ function Button({ children, link, onClick }) {
   if (link) {
     return (
       <Link href={link}>
-        <a className={styles.button}>{children}</a>
+        <a className={styles.btn}>{children}</a>
       </Link>
     );
   }
