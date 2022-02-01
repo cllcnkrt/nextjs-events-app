@@ -1,5 +1,5 @@
 import React from 'react';
-import EventItem from './eventItem';
+import EventItem from '../events-item/eventItem';
 import styles from './eventList.module.css';
 
 function EventList({ items }) {
