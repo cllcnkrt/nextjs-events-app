@@ -1,10 +1,12 @@
 import React from 'react';
+import MainHeader from './mainHeader';
 
-function Layout() {
+function Layout({ children }) {
   return (
-    <div>
-      <h1>Layout</h1>
-    </div>
+    <>
+      <MainHeader />
+      <main>{children}</main>
+    </>
   );
 }
 
