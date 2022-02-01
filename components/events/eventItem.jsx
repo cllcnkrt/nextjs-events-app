@@ -1,6 +1,8 @@
-import React from 'react';
 import styles from './eventItem.module.css';
 import Button from '../ui/button';
+import DateIcon from '../icons/date-icon';
+import AddressIcon from '../icons/address-icon';
+import ArrowRightIcon from '../icons/arrow-right-icon';
 
 function EventItem({ title, image, date, location, id }) {
   const dateFormatted = new Date(date).toLocaleDateString('en-US', {
@@ -19,14 +21,21 @@ function EventItem({ title, image, date, location, id }) {
         <div className={styles.summary}>
           <h2>{title}</h2>
           <div className={styles.date}>
+            <DateIcon />
             <time>{dateFormatted}</time>
           </div>
-          <div>
-            <address className={styles.address}>{formattedLocation}</address>
+          <div className={styles.address}>
+            <AddressIcon />
+            <address>{formattedLocation}</address>
           </div>
         </div>
         <div className={styles.actions}>
-          <Button link={exploreLink}>Explore Event</Button>
+          <Button link={exploreLink}>
+            <span>Explore Event</span>
+            <span className={styles.icon}>
+              <ArrowRightIcon />
+            </span>
+          </Button>
         </div>
       </div>
     </li>
