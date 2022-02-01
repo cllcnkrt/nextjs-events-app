@@ -1,8 +1,8 @@
 import styles from './eventItem.module.css';
 import Button from '../ui/button';
-import DateIcon from '../icons/date-icon';
-import AddressIcon from '../icons/address-icon';
-import ArrowRightIcon from '../icons/arrow-right-icon';
+import DateIcon from '../icons/dateIcon';
+import AddressIcon from '../icons/addressIcon';
+import ArrowRightIcon from '../icons/arrowRightIcon';
 
 function EventItem({ title, image, date, location, id }) {
   const dateFormatted = new Date(date).toLocaleDateString('en-US', {
